@@ -8,16 +8,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-/*    final int callingUid = android.os.Process.myUid();
-        if (callingUid == android.os.Process.SYSTEM_UID || callingUid == uid) {
-        return nativeGetUidStat(uid, TYPE_TX_BYTES);
-    } else {
-        return UNSUPPORTED;
-    }*/
-
-/**
- * 现在根据uid获取上下行流量的方法，只有系统uid 或 获取自身才会生效
- */
 public class TrafficUidStatProxy implements ITrafficModel {
 
     private final String TAG = "TrafficUidStatProxy";
